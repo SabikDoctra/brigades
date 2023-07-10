@@ -26,8 +26,7 @@
 	src: url("fonts/MYRIADGEOBOLD.TTF");
 }
 
-html,
-body {
+html {
 	width: 100%;
 	height: 100%;
 	margin: 0;
@@ -36,6 +35,19 @@ body {
 	font-family: MyriadGEOMedium, Consolas;
     user-select: none;
     -webkit-user-select: none;
+}
+
+body {
+    width: 100%;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: MyriadGEOMedium, Consolas;
+    user-select: none;
+    -webkit-user-select: none;
+    position: relative;
+    height: auto;
+    min-height: 100% !important;
 }
 
 .error{
