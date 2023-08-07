@@ -258,7 +258,10 @@ const prepareWeekDom = (json) => {
 			" " +
 			getMonthShortText(date.getUTCMonth()) +
 			" " +
-			date.getUTCFullYear();
+			date.getUTCFullYear() + 
+			" " + 
+			getDayShortText(date.getUTCDay());
+		console.log(date.getUTCDay());
 		headContent.appendChild(headDate);
 		date = addDays(date, 1);
 	}
@@ -310,6 +313,25 @@ const prepareWeekGrid = (json) => {
 
 const addMinutes = (date, minutes) => {
 	return new Date(date.getTime() + minutes * 60000);
+};
+
+const getDayShortText = (text) => {
+	switch (text) {
+		case 1:
+			return "ორ";
+		case 2:
+			return "სამ";
+		case 3:
+			return "ოთხ";
+		case 4:
+			return "ხუთ";
+		case 5:
+			return "პარ";
+		case 6:
+			return "შაბ";
+		case 0:
+			return "კვ";
+	}
 };
 
 const getMonthShortText = (text) => {
